@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00895D811D7C262300B47063 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00895D801D7C262300B47063 /* UnitTest.swift */; };
 		00A856F81D6AF80A005CD2BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A856F71D6AF80A005CD2BD /* main.m */; };
 		00A856FB1D6AF80A005CD2BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A856FA1D6AF80A005CD2BD /* AppDelegate.m */; };
 		00A856FE1D6AF80A005CD2BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A856FD1D6AF80A005CD2BD /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00895D801D7C262300B47063 /* UnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitTest.swift; path = TestCocoaPodsTests/UnitTest.swift; sourceTree = "<group>"; };
 		00A856F31D6AF80A005CD2BD /* TestCocoaPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCocoaPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A856F71D6AF80A005CD2BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00A856F91D6AF80A005CD2BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		00A856EA1D6AF80A005CD2BD = {
 			isa = PBXGroup;
 			children = (
+				00895D801D7C262300B47063 /* UnitTest.swift */,
 				00A856F51D6AF80A005CD2BD /* TestCocoaPods */,
 				00A8570F1D6AF80A005CD2BD /* TestCocoaPodsTests */,
 				00A8571A1D6AF80A005CD2BD /* TestCocoaPodsUITests */,
@@ -264,6 +267,7 @@
 					};
 					00A8570B1D6AF80A005CD2BD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 00A856F21D6AF80A005CD2BD;
 					};
 					00A857161D6AF80A005CD2BD = {
@@ -457,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00A857111D6AF80A005CD2BD /* TestCocoaPodsTests.m in Sources */,
+				00895D811D7C262300B47063 /* UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,10 +606,13 @@
 			baseConfigurationReference = 42B4EA98B80507797DB55B6E /* Pods-TestCocoaPodsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestCocoaPodsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestCocoaPodsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCocoaPods.app/TestCocoaPods";
 			};
 			name = Debug;
@@ -614,10 +622,12 @@
 			baseConfigurationReference = 423AAFC1E29E8FD7283D9735 /* Pods-TestCocoaPodsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestCocoaPodsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffrey.mobile.TestCocoaPodsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCocoaPods.app/TestCocoaPods";
 			};
 			name = Release;
