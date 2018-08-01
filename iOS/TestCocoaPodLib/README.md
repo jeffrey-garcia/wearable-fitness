@@ -1,4 +1,4 @@
-# TestLib - a sample cocoapod-based project with local pod library
+# TestLib - a sample cocoapod-based project with local pod library mixing Swift and Objective-C
 This is an cocoapod-based project which references a local development pod that supports both Objective-c and Swift3.3.
 
 The sample project has been verified on Xcode 9.3
