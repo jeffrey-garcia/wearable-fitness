@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "TestCocoaPodLib.h"
 #import "TestObjc.h"
 
 FOUNDATION_EXPORT double TestCocoaPodLibVersionNumber;

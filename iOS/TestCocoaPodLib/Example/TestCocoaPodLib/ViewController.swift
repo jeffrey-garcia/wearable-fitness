@@ -18,9 +18,12 @@ class ViewController: UIViewController {
         
         let testObjc = TestObjc()
         testObjc.test()
-        
+
         let testSwift = TestSwift()
         testSwift.test()
+        
+        let testSwift2 = TestSwift2()
+        testSwift2.test()
     }
     
     override func didReceiveMemoryWarning() {
