@@ -7,53 +7,53 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
-  - SalesforceNetwork (4.3.1):
-    - SalesforceNetwork/SalesforceNetwork (= 4.3.1)
-  - SalesforceNetwork/SalesforceNetwork (4.3.1):
+  - SalesforceNetwork (4.2.0):
+    - SalesforceNetwork/SalesforceNetwork (= 4.2.0)
+  - SalesforceNetwork/SalesforceNetwork (4.2.0):
     - SalesforceSDKCore
-  - SalesforceRestAPI (4.3.1):
-    - SalesforceRestAPI/SalesforceRestAPI (= 4.3.1)
-  - SalesforceRestAPI/SalesforceRestAPI (4.3.1):
+  - SalesforceRestAPI (4.2.0):
+    - SalesforceRestAPI/SalesforceRestAPI (= 4.2.0)
+  - SalesforceRestAPI/SalesforceRestAPI (4.2.0):
     - SalesforceNetwork
     - SalesforceSDKCore
-  - SalesforceSDKCore (4.3.1):
-    - SalesforceSDKCore/SalesforceSDKCore (= 4.3.1)
-  - SalesforceSDKCore/SalesforceSDKCore (4.3.1):
+  - SalesforceSDKCore (4.2.0):
+    - SalesforceSDKCore/SalesforceSDKCore (= 4.2.0)
+  - SalesforceSDKCore/SalesforceSDKCore (4.2.0):
     - CocoaLumberjack (~> 2.3.0)
-    - SalesforceSDKCore/SalesforceSDKCore/arc (= 4.3.1)
-    - SalesforceSDKCore/SalesforceSDKCore/base (= 4.3.1)
-    - SalesforceSDKCore/SalesforceSDKCore/no-arc (= 4.3.1)
-  - SalesforceSDKCore/SalesforceSDKCore/arc (4.3.1):
+    - SalesforceSDKCore/SalesforceSDKCore/arc (= 4.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base (= 4.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc (= 4.2.0)
+  - SalesforceSDKCore/SalesforceSDKCore/arc (4.2.0):
     - CocoaLumberjack (~> 2.3.0)
     - SalesforceSDKCore/SalesforceSDKCore/base
     - SalesforceSDKCore/SalesforceSDKCore/no-arc
-  - SalesforceSDKCore/SalesforceSDKCore/base (4.3.1):
+  - SalesforceSDKCore/SalesforceSDKCore/base (4.2.0):
     - CocoaLumberjack (~> 2.3.0)
-  - SalesforceSDKCore/SalesforceSDKCore/no-arc (4.3.1):
+  - SalesforceSDKCore/SalesforceSDKCore/no-arc (4.2.0):
     - CocoaLumberjack (~> 2.3.0)
     - SalesforceSDKCore/SalesforceSDKCore/base
-  - SmartStore (4.3.1):
-    - SmartStore/SmartStore (= 4.3.1)
-  - SmartStore/SmartStore (4.3.1):
+  - SmartStore (4.2.0):
+    - SmartStore/SmartStore (= 4.2.0)
+  - SmartStore/SmartStore (4.2.0):
     - SalesforceSDKCore
     - SQLCipher/fts (~> 3.4.0)
-  - SmartSync (4.3.1):
-    - SmartSync/SmartSync (= 4.3.1)
-  - SmartSync/SmartSync (4.3.1):
+  - SmartSync (4.2.0):
+    - SmartSync/SmartSync (= 4.2.0)
+  - SmartSync/SmartSync (4.2.0):
     - SalesforceRestAPI
     - SalesforceSDKCore
     - SmartStore
-  - SQLCipher/common (3.4.0)
-  - SQLCipher/fts (3.4.0):
+  - SQLCipher/common (3.4.2)
+  - SQLCipher/fts (3.4.2):
     - SQLCipher/common
   - WYPopoverController (0.1.8)
 
 DEPENDENCIES:
-  - SalesforceNetwork (~> 4.3.1)
-  - SalesforceRestAPI (~> 4.3.1)
-  - SalesforceSDKCore (~> 4.3.1)
-  - SmartStore (~> 4.3.1)
-  - SmartSync (~> 4.3.1)
+  - SalesforceNetwork (~> 4.2.0)
+  - SalesforceRestAPI (~> 4.2.0)
+  - SalesforceSDKCore (~> 4.2.0)
+  - SmartStore (~> 4.2.0)
+  - SmartSync (~> 4.2.0)
   - WYPopoverController (from `https://github.com/nicolaschengdev/WYPopoverController.git`, branch `master`)
 
 EXTERNAL SOURCES:
@@ -70,14 +70,14 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
-  SalesforceNetwork: 0a53deea9a3dbfb11586584fba28de435d2797d9
-  SalesforceRestAPI: 2334b3bff7b5e8b2e64b0b8a72031b05d46d9381
-  SalesforceSDKCore: 64be7b51436f190c70ebac4adb0e56a70a46b0ad
-  SmartStore: 0bc42f6ff4533469b245cc6e7df584f9494ec084
-  SmartSync: 70a253beb77ee1244ded7d60f4bfb75df590df05
-  SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
+  SalesforceNetwork: 690123c0d8db8f198c84fb9fb01c425e803fc68c
+  SalesforceRestAPI: 3fe47cf00f6f0e265f107f07110927c6b51a8e2a
+  SalesforceSDKCore: 860ea48ef508a74d8d2c77de0e5feed4fd595385
+  SmartStore: ff1225d8d9133227e30d9b90d4b96e26ae140bb3
+  SmartSync: 311d1eb6468b3e3d4a5306cd6c2e563158881fe8
+  SQLCipher: 9dd8a66dd5e4276ce9e986322871e4ed5b4711b3
   WYPopoverController: a7f420833d355d868e5836415ba07ce0dbec1a27
 
-PODFILE CHECKSUM: e25cd72ddc90fdfc024e642177da834031651f15
+PODFILE CHECKSUM: 3bbfffd99f21b7d8d7d42ee04273dc5ee024cb69
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0

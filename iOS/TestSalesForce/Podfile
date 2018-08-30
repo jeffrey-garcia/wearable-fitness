@@ -1,19 +1,17 @@
 # Uncomment this line to define a global platform for your project
-
+use_frameworks!
 platform :ios, '9.0'
+inhibit_all_warnings!
 
 source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git' # need to be first 
 source 'https://github.com/CocoaPods/Specs.git'
 
-use_frameworks!
-
-
 def main
-    pod 'SalesforceSDKCore', '~> 4.3.1'
-    pod 'SalesforceNetwork', '~> 4.3.1'
-    pod 'SalesforceRestAPI', '~> 4.3.1'
-    pod 'SmartStore', '~> 4.3.1'
-    pod 'SmartSync', '~> 4.3.1'
+    pod 'SalesforceSDKCore', '~> 4.2.0'
+    pod 'SalesforceNetwork', '~> 4.2.0'
+    pod 'SalesforceRestAPI', '~> 4.2.0'
+    pod 'SmartStore', '~> 4.2.0'
+    pod 'SmartSync', '~> 4.2.0'
     
     ui_dependencies
 end
@@ -24,4 +22,11 @@ end
 
 target 'TestSalesForce' do
     main
+end
+
+# Important Advisory: SQLCipher with Xcode 9 and new SDKs
+# https://discuss.zetetic.net/t/important-advisory-sqlcipher-with-xcode-9-and-new-sdks/2371
+post_install do | installer |
+    print "SQLCipher: link Pods/Headers/sqlite3.h"
+    system "mkdir -p Pods/Headers/Private && ln -s ../../SQLCipher/sqlite3.h Pods/Headers/Private"
 end
