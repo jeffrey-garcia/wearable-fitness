@@ -1,0 +1,48 @@
+PODS:
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - CryptoSwift (0.7.0)
+  - ObjectMapper (2.2.5)
+  - ReachabilitySwift (4.1.0)
+  - SalesforceSDKCore (4.2.0):
+    - SalesforceSDKCore/SalesforceSDKCore (= 4.2.0)
+  - SalesforceSDKCore/SalesforceSDKCore (4.2.0):
+    - CocoaLumberjack (~> 2.3.0)
+    - SalesforceSDKCore/SalesforceSDKCore/arc (= 4.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base (= 4.2.0)
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc (= 4.2.0)
+  - SalesforceSDKCore/SalesforceSDKCore/arc (4.2.0):
+    - CocoaLumberjack (~> 2.3.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base
+    - SalesforceSDKCore/SalesforceSDKCore/no-arc
+  - SalesforceSDKCore/SalesforceSDKCore/base (4.2.0):
+    - CocoaLumberjack (~> 2.3.0)
+  - SalesforceSDKCore/SalesforceSDKCore/no-arc (4.2.0):
+    - CocoaLumberjack (~> 2.3.0)
+    - SalesforceSDKCore/SalesforceSDKCore/base
+  - SAMKeychain (1.5.3)
+
+DEPENDENCIES:
+  - CryptoSwift (= 0.7.0)
+  - ObjectMapper (= 2.2.5)
+  - ReachabilitySwift (= 4.1.0)
+  - SalesforceSDKCore (~> 4.2.0)
+  - SAMKeychain (= 1.5.3)
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  CryptoSwift: e197577cc40d551110480a64c73f31dbff1d8e74
+  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  ReachabilitySwift: 6b797c78a21f2dc1aa6b7598f04d7393ccfe0963
+  SalesforceSDKCore: 860ea48ef508a74d8d2c77de0e5feed4fd595385
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+
+PODFILE CHECKSUM: 78e19f8368c0506a4f867fbae7ba43c8094f20cd
+
+COCOAPODS: 1.2.1
