@@ -15,6 +15,7 @@
 @implementation WebviewController
 
 UIWebView *webView;
+UIImageView *imageView;
 
 - (void)viewDidDisappear:(BOOL)animated
 {
@@ -44,8 +45,29 @@ UIWebView *webView;
     self.view.autoresizesSubviews = YES;
     webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
+    //webView.opaque = NO;
+    // set background color
+    //webView.backgroundColor = [UIColor colorWithRed:((float)((0x000000 & 0xFF0000) >> 16))/255.0 \
+    green:((float)((0x000000 & 0x00FF00) >>  8))/255.0 \
+    blue:((float)((0x000000 & 0x0000FF) >>  0))/255.0 \
+    alpha:1.0];
+    //webView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]];
+    
+    webView.frame = self.view.bounds;
+    
+    UIImage *image = [UIImage imageNamed:@"Default"];
+    imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.frame = [[UIScreen mainScreen] bounds];
+    //imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    //imageView.contentMode = UIViewContentModeScaleToFill;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.hidden = NO;
+    
+    webView.hidden = YES;
+    
     //Add to the UI
     [self.view addSubview:webView];
+    [self.view addSubview:imageView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -55,9 +77,11 @@ UIWebView *webView;
     NSBundle *mainBundle = [NSBundle mainBundle];
     path = [mainBundle pathForResource:@"test_css" ofType:@"html"];
     
+    [webView loadHTMLString:@"<html>TEST</html>" baseURL:nil];
+    
     // make a file: URL out of the path
-    //NSURL *theUrl = [NSURL fileURLWithPath:path];
-    //[webView loadRequest:[NSURLRequest requestWithURL:theUrl]];
+    //    NSURL *theUrl = [NSURL fileURLWithPath:path];
+    //    [webView loadRequest:[NSURLRequest requestWithURL:theUrl]];
     
     // need to do this every time this view appears so that the "home" link keeps working
     //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com.hk"]]];
@@ -65,7 +89,7 @@ UIWebView *webView;
     // Move Payment Gateway
     //[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.mpaymall.com/MPayMobi/MerchantPay.jsp"]]];
     // Move Webcart
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?language=en&devicetype=ios&rewardid=2&promoclass=4&macauind=N&ownername=Tai%20Man%20Chan&deliverymethod=C&promocode=SYJ6BPJW4V"]]];
+    //    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.hkonlinemall.com/hkonlinemall-web/manulife/index.jsp?language=en&devicetype=ios&rewardid=2&promoclass=4&macauind=N&ownername=Tai%20Man%20Chan&deliverymethod=C&promocode=SYJ6BPJW4V"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,7 +108,7 @@ UIWebView *webView;
     
     NSLog(@"WebView:ShouldStartLoadWithRequest with url: %@", urlString);
     NSLog(@"URL scheme: %@",[reqURL scheme]);
-   	NSLog(@"URL host: %@",[reqURL host]);
+    NSLog(@"URL host: %@",[reqURL host]);
     NSLog(@"NavigationType: %li",(long)navigationType);
     
     if ([[reqURL scheme] isEqualToString:@"manulifemove"]) {
@@ -105,6 +129,9 @@ UIWebView *webView;
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"webViewDidFinishLoad");
+    
+    imageView.hidden = YES;
+    webView.hidden = NO;
 }
 
 // webview delegate methods support
@@ -141,9 +168,9 @@ UIWebView *webView;
         NSLog(@"disabling UI button...");
         
         // cast to UIButton
-//        UIButton *theBtn = (UIButton *)[self.view viewWithTag:tag.intValue];
-//        theBtn.enabled = NO;
-//        theBtn.hidden = YES;
+        //        UIButton *theBtn = (UIButton *)[self.view viewWithTag:tag.intValue];
+        //        theBtn.enabled = NO;
+        //        theBtn.hidden = YES;
         
         // Does not require direct referecning of UIButton's instance !!
         [sender setValue:[NSNumber numberWithBool:YES] forKey:@"hidden"];
@@ -204,4 +231,5 @@ UIWebView *webView;
 // === End of Key-Value-Observer ===//
 
 @end
+
 
